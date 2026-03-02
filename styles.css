@@ -1,0 +1,234 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.5;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#newBookBtn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s;
+}
+
+#newBookBtn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Book grid */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Book card */
+.book-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 6px solid #3b82f6;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.book-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.book-card .author {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.book-card .pages {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #374151;
+}
+
+.book-card .read-status {
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.read-status.read {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.read-status.not-read {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.card-actions button {
+    flex: 1;
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toggle-read {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.toggle-read:hover {
+    background-color: #bae6fd;
+}
+
+.remove-btn {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.remove-btn:hover {
+    background-color: #fecaca;
+}
+
+/* Dialog / modal */
+dialog {
+    border: none;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    max-width: 450px;
+    width: 90%;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#bookForm h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#bookForm label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #374151;
+}
+
+#bookForm input[type="text"],
+#bookForm input[type="number"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+#bookForm input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: #2563eb;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.form-actions button {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#submitBtn {
+    background-color: #2563eb;
+    color: white;
+}
+
+#submitBtn:hover {
+    background-color: #1d4ed8;
+}
+
+#closeDialogBtn {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+#closeDialogBtn:hover {
+    background-color: #d1d5db;
+}
